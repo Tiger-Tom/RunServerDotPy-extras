@@ -12,7 +12,11 @@ with cProfile.Profile() as pr:
 stats = pstats.Stats(pr)
 stats.sort_stats(pstats.SortKey.TIME)
 # Display results
-stats.print_stats(100)
+stats.print_stats(20)
 stats.dump_stats(filename='profile.prof')
 os.system('pip3 install snakeviz')
-os.system('snakeviz profile.prof')
+try:
+    os.system('snakeviz profile.prof')
+except KeyboardInterrupt:
+    pass
+os.remove('profile.prof')
