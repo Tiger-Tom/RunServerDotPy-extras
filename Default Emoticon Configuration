@@ -1,4 +1,4 @@
-0.3
+0.1
 #The first line (above) is the delay (in seconds) that the program waits for between displaying each emoticon
 ##=Comment, %=Name, &=Multiple emoticons in one line (each character is a different emoticon)
 #The line must start with the respective symbol!
@@ -23,12 +23,7 @@
 &⌛⏳⌚
 #Arrows
 &←↑→↓↔↕↖↗↘↙↺↻
-#Math
-##Fractions
+#Fractions
 &⅔¼¾⅛⅜⅝⅞
-##Equality
-&≤≥≈≠
-##"Numbers"
-&∞ℼ
-##Misc.
-&√°•
+#Math
+&∞ℼ≤≥≈≠√°•
