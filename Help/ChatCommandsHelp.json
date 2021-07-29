@@ -1,0 +1,26 @@
+[{
+    "help [command*]": "Show help (this page) or help about optional [command]",
+    "emoticons": "Shows a list of copyable emoticons (specified by the server owner)",
+    "size": "Get the total size of the server world folder",
+    "speedtest": "Runs an internet speed test (has a 10 minute cooldown)",
+    "sysinfo | info": "Shows some system information, such as memory and cpu usage",
+    "tps": "Shows the TPS (has a 2 minute cooldown)",
+    "uptime": "Show how long the server has been online since last restart"
+}, {
+    "help [command*]": "Show help (this page) or help about optional [command]",
+    "ban [player] [reason*]": "Ban [player] for optional [reason]",
+    "crash [player] [severity*=3, 1-5]": "Crashes the target player's game. Optional argument severity (default 3) chooses how \"severe\" the crash is (as well as how long it takes before the command is finished)",
+    "kick [player] [reason*]": "Kick [player] for optional [reason]",
+    "reconfig": "Reloads configuration from files (except for server icons, sorry. Don't edit the server icons while the server is running)",
+    "logs {total}": "Show how many logs have been collected (since last server restart, or since last shutdown if {total} is specified)",
+    "refresh": "Refreshes RunServerDotPy, reloading config and script. The server has to go offline during this time",
+    "reload": "Reloads all datapacks and assets (/reload command)",
+    "restart | stop [reason*]": "Restart the server for optional [reason]",
+    "save | save-all": "Save the game",
+    "unban | pardon [player]": "Unban/pardon [player]",
+    "update | upgrade {dist,clean,pip}": "Runs \"apt-get update\" and \"apt-get upgrade\" (also runs \"apt-get dist-upgrade\" if specified by flag {dist}, auto-cleans for flag {clean}, and attempts to upgrade pip modules for flag {pip}). ChatCommands can still be paused while this is running"
+}, {
+    "help [command*]": "Show help (this page) or help about optional [command]",
+    "clearlogs": "Delete all logs, and resets the current log files",
+    "py [command]": "Runs the [command] in Python and returns output"
+}]
