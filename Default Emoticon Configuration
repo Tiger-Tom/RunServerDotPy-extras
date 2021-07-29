@@ -1,6 +1,8 @@
-# #=Comment, %=Name, &=Multiple emoticons in one line (each character is a different emoticon)
-# The line must start with the respective symbol!
-# Blank lines are ignored
+0.3
+#The first line (above) is the delay (in seconds) that the program waits for between displaying each emoticon
+##=Comment, %=Name, &=Multiple emoticons in one line (each character is a different emoticon)
+#The line must start with the respective symbol!
+#Blank lines are ignored
 
 #Faces
 ¯\_(ツ)_/¯
