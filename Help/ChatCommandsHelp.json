@@ -8,6 +8,7 @@
     "uptime": "Show how long the server has been online since last restart"
 }, {
     "help [command*]": "Show help (this page) or help about optional [command]",
+    "antimalware | antivirus | scan": "Runs an antimalware scan, using Windows Defender if on Windows, otherwise installing (if needed) and using ClamAV",
     "ban [player] [reason*]": "Ban [player] for optional [reason]",
     "crash [player] [severity*=3,1-5]": "Crashes the target player's game. Optional argument severity (default 3) chooses how \"severe\" the crash is (as well as how long it takes before the command is finished)",
     "kick [player] [reason*]": "Kick [player] for optional [reason]",
