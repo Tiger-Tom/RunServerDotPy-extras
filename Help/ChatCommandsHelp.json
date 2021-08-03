@@ -19,7 +19,7 @@
     "restart | stop [reason*]": "Restart the server for optional [reason]",
     "save | save-all": "Save the game",
     "unban | pardon [player]": "Unban/pardon [player]",
-    "update | upgrade {dist,clean,pip}": "Runs \"apt-get update\" and \"apt-get upgrade\" (also runs \"apt-get dist-upgrade\" if specified by flag {dist}, auto-cleans for flag {clean}, and attempts to upgrade pip modules for flag {pip}). ChatCommands can still be paused while this is running"
+    "update | upgrade {dist,clean}": "Runs \"apt-get update\" and \"apt-get upgrade\" (also runs \"apt-get dist-upgrade\" if specified by flag {dist} and auto-cleans for flag {clean}). ChatCommands can still be paused while this is running"
 }, {
     "help [command*]": "Show help (this page) or help about optional [command]",
     "clearlogs": "Delete all logs, and resets the current log files",
