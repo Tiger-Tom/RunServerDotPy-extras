@@ -3,7 +3,8 @@
 #They can also run any functions that the normal code can, so be careful when loading them
 #ChatCommands are loaded A-Z.
 #Output syntax:
-#mod_output_ = (help texts (dictionary), chat command funcs (dictionary), perm level (integer, 0-2 (0=any user, 1=admin only, 2=root user)))
+# global mod_output_
+# mod_output_ = (help texts (dictionary), chat command funcs (dictionary), perm level (integer, 0-2 (0=any user, 1=admin only, 2=root user)))
 
 # Permission level for all defined ChatCommands in this mod
 permLevel = 0 #0=any user ; 1=admin user ; 2=root/console only
@@ -26,4 +27,5 @@ chatCommandFuncs = {
 }
 
 # Return the data
+global mod_output_ #"mod_output_" MUST be global
 mod_output_ = (helpTxts, chatCommandFuncs, permLevel) #You MUST use "mod_output_ = [your outputs]" here, as anything else won't work!
