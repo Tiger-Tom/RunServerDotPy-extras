@@ -19,7 +19,7 @@ def moddedChatCommand(args, user):
 # Example help text
 helpTxts = {
     'chatcommandtest | cctest': 'A test command, loaded through a mod!',
-    'help [*command]': 'The modified "help" command, through a mod',
+    'help [command*]': 'The modified "help" command, through a mod',
 }
 chatCommandFuncs = {
     'chatcommandtest': chatCommand,
