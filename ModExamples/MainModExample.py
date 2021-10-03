@@ -2,15 +2,15 @@
 #They can also modify current ChatCommands and help text.
 #They can also run any functions that the normal code can, so be careful when loading them
 #ChatCommands are loaded A-Z.
-#All of the code in "load_mod" will be used to load the mod. It will be passed 2 arguments:
+#All of the code in "init_mod" will be used to load the mod. It will be passed 2 arguments:
 # An array of dictionaries as the help texts (the 0th index will be base level permission commands, 1st index will be sudo, 2nd will be root)
 # An array of dictionaries as the ChatCommands (indexes same as with help texts)
 #Nothing will be done with any returned values
 #Output syntax:
-#def load_mod(helpTxts, chatCommandFuncs):
+#def init_mod(helpTxts, chatCommandFuncs):
 #   [your code]
 
-def load_mod(helpTxts, chatCommandFuncs):
+def init_mod(helpTxts, chatCommandFuncs):
     # Setup ChatCommands
     def chatCommand(args, user):
         tellRaw('Test:\n'+str(args), 'FromText', user)
