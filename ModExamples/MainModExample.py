@@ -1,16 +1,21 @@
-#Mods can add new ChatCommands and new help texts.
-#They can also modify current ChatCommands and help text.
-#They can also run any functions that the normal code can, so be careful when loading them
-#ChatCommands are loaded A-Z.
-#All of the code in "init_mod" will be used to load the mod. It will be passed 2 arguments:
-# An array of dictionaries as the help texts (the 0th index will be base level permission commands, 1st index will be sudo, 2nd will be root)
-# An array of dictionaries as the ChatCommands (indexes same as with help texts)
-#Nothing will be done with any returned values
-#Output syntax:
-#def init_mod(helpTxts, chatCommandFuncs):
-#   [your code]
+#What mods can do:
+# Mods can add new ChatCommands and new help texts.
+# They can also modify current ChatCommands and help text.
+# They can also run any functions that the normal code can, so be careful when loading them
+#How mods are loaded:
+# ChatCommands are loaded A-Z.
+# All of the code in "init_mod" will be used to load the mod. It will be passed 2 arguments:
+#  An array of dictionaries as the help texts (the 0th index will be base level permission commands, 1st index will be sudo, 2nd will be root)
+#  An array of dictionaries as the ChatCommands (indexes same as with help texts)
+# No "mod loading" script is needed for the mod to function
 
-def init_mod(helpTxts, chatCommandFuncs):
+#Initialization function syntax:
+#def init_mod(helpTxts, chatCommandFuncs, globalVars):
+#   [your code]
+# Returns nothing, gets mutable dictionary of globals, mutable help texts array, and mutable ChatCommand functions array as arguments
+
+
+def init_mod(helpTxts, chatCommandFuncs, globalVals):
     # Setup ChatCommands
     def chatCommand(args, user):
         tellRaw('Test:\n'+str(args), 'FromText', user)
@@ -26,3 +31,6 @@ def init_mod(helpTxts, chatCommandFuncs):
     # Apply help texts
     helpTxts[0]['chatcommandtest | cctest'] = 'A test command, loaded through a mod'
     helpTxts[0]['help [command*]'] = 'The modified help command'
+    
+    # Modify global variables
+    globalVals['motds'].append('Modded MOTD')
