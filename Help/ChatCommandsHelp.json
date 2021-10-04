@@ -6,9 +6,9 @@
     "sysinfo | info": "Shows some system information, such as memory and cpu usage",
     "tps": "Shows the TPS (has a 2 minute cooldown)",
     "uptime": "Show how long the server has been online since last restart"
+    "wiki | github": "Shows a list of links for RunServerDotPy's Wikipedia and GitHub page
 }, {
     "help [command*]": "Show help (this page) or help about optional [command]",
-    "antimalware | antivirus | scan": "Runs an antimalware scan, using Windows Defender if on Windows, otherwise installing (if needed) and scanning with ClamAV",
     "ban [player] [reason*]": "Ban [player] for optional [reason]",
     "crash [player] [severity*=3,1-5]": "Crashes the target player's game. Optional argument severity (default 3) chooses how \"severe\" the crash is (as well as how long it takes before the command is finished)",
     "kick [player] [reason*]": "Kick [player] for optional [reason]",
@@ -16,10 +16,10 @@
     "reconfig": "Reloads configuration from files (except for server icons, sorry. Don't edit the server icons while the server is running)",
     "refresh": "Refreshes RunServerDotPy, reloading the script, as well as any configuration and mods. The server has to go offline during this time",
     "reload": "Reloads all datapacks and assets (/reload command)",
+    "remod": "Reloads all mods (unloads mods and the loads them again, finding new mods)",
     "restart | stop [reason*]": "Restart the server for optional [reason]",
     "save | save-all": "Save the game",
     "unban | pardon [player]": "Unban/pardon [player]",
-    "update | upgrade {dist,clean}": "Runs \"apt-get update\" and \"apt-get upgrade\" (also runs \"apt-get dist-upgrade\" if specified by flag {dist} and auto-cleans for flag {clean}). ChatCommands can still be paused while this is running"
 }, {
     "help [command*]": "Show help (this page) or help about optional [command]",
     "clearlogs": "Delete all logs, and resets the current log files",
