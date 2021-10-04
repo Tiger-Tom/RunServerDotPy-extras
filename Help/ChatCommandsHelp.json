@@ -5,8 +5,8 @@
     "speedtest": "Runs an internet speed test (has a 10 minute cooldown)",
     "sysinfo | info": "Shows some system information, such as memory and cpu usage",
     "tps": "Shows the TPS (has a 2 minute cooldown)",
-    "uptime": "Show how long the server has been online since last restart"
-    "wiki | github": "Shows a list of links for RunServerDotPy's Wikipedia and GitHub page
+    "uptime": "Show how long the server has been online since last restart",
+    "wiki | github": "Shows a list of links for RunServerDotPy's Wikipedia and GitHub page"
 }, {
     "help [command*]": "Show help (this page) or help about optional [command]",
     "ban [player] [reason*]": "Ban [player] for optional [reason]",
