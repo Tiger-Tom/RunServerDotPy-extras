@@ -14,6 +14,11 @@
 #   [your code]
 # Returns nothing, gets mutable dictionary of globals, mutable help texts array, and mutable ChatCommand functions array as arguments
 
+#Custom runtime function syntax:
+#def inject_custom_mod_runtime(globalVars):
+#   [your code]
+#   return {'firstStart': [functionsToRunBeforeStartingServer], 'everyStart': [functionsToRunBeforeEveryStart (after firstStart)], 'lastStop': [functionsToRunAfterEverythingElseIsDone (after everyStop)], 'everyStop': [functionsToRunAfterEveryStop]}
+# Returns a dictionary of runtimes, accepts a list of global variables
 
 def init_mod(helpTxts, chatCommandFuncs, globalVals):
     # Setup ChatCommands
