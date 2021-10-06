@@ -1,3 +1,9 @@
 window.onload = function() {
-    fetch('localhost:{%PORT}').then(response => response.text()).then(data => console.log(data))
+    sock = new WebSocket('ws://localhost:{%PORT}');
+    sock.onopen = function() {
+        sock.send('Connection opened!');
+    }
+    sock.onmessage = function(msg) {
+        console.log(msg)
+    }
 }
