@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket demo</title>
+        <script>
+        function mainLoop() {
+            window.setInterval(function() {
+                fetch('./_data').then(response => response.text()).then(function(data) {
+                    document.getElementById('mainDiv').innerHTML = encDec(window.mainAuth, data);
+                });
+            }, 500);
+        }
+        function setupAuth() {
+            fetch('./_auth/init').then(response => response.text()).then(function(data) {
+                document.getElementById('auth_input').type = 'text';
+                document.getElementById('click_auth').onclick = testAuth;
+                document.getElementById('click_auth').innerHTML = 'Test Passcode';
+            });
+        }
+        function testAuth() {
+            fetch('./_auth/test').then(response => response.text()).then(function(data) {
+                if (encDec(document.getElementById('auth_input').value.split('').reverse().join(''), data) == document.getElementById('auth_input').value) {
+                    document.getElementById('authDiv').style.display = 'none';
+                    document.getElementById('mainDiv').style.display = 'block';
+                    window.mainAuth = document.getElementById('auth_input').value;
+                    alert('Authenticated');
+                    mainLoop();
+                } else {
+                    alert('Authentication failure');
+                }
+            });
+        }
+        function encDec(key, val) {
+            res = '';
+            for (i=0; i<val.length; i++) {
+                res += String.fromCharCode(key.charCodeAt(i % key.length)^val.charCodeAt(i));
+            }
+            return res;
+        }
+        </script>
+    </head>
+    <body>
+        <div id='authDiv'>
+        <button id='click_auth' onclick='setupAuth()'>Initialize Authentication</button>
+        <input type='hidden' id='auth_input' label='Input Passcode'></input>
+        </div>
+        <div id='mainDiv' style='display: none'>
+        <t>Waiting for data..."</t>
+        </div>
+    </body>
+</html>
