@@ -6,7 +6,9 @@
         function mainLoop() {
             window.setInterval(function() {
                 fetch('./_data').then(response => response.text()).then(function(data) {
-                    document.getElementById('mainDiv').innerHTML = encDec(window.mainAuth, data).replaceAll('\n', '<br>') + '<br>' + document.getElementById('mainDiv').innerHTML; 
+                    try {
+                        document.getElementById('mainDiv').innerHTML = JSON.parse(encDec(window.mainAuth, data)).join('\n')+'\n'+document.getElementById('mainDiv').innerHTML;
+                    } catch (e) {}
                 });
                 while (document.getElementById('mainDiv').innerText.split('\n').length > Math.round(window.innerHeight/15)) {
                     document.getElementById('mainDiv').innerHTML = document.getElementById('mainDiv').innerText.substring(0, document.getElementById('mainDiv').innerText.lastInstanceOf('\n'));
