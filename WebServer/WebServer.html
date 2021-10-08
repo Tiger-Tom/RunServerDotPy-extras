@@ -8,7 +8,7 @@
                 fetch('./_data').then(response => response.text()).then(function(data) {
                     try {
                         console.log(encDec(window.mainAuth, data));
-                        document.getElementById('mainDiv').innerHTML = JSON.parse(encDec(window.mainAuth, data)).join('\n')+'\n'+document.getElementById('mainDiv').innerHTML;
+                        document.getElementById('mainDiv').innerHTML = JSON.parse(encDec(window.mainAuth, data).replaceAll('\'', '"')).join('\n')+'\n'+document.getElementById('mainDiv').innerHTML;
                     } catch (e) {
                         console.log(e);
                         console.log(encDec(window.mainAuth, data));
