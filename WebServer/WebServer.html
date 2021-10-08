@@ -9,7 +9,7 @@
                     try {
                         console.log(encDec(window.mainAuth, data));
                         parsed = JSON.parse(encDec(window.mainAuth, data).replaceAll('\'', '"')).join('\n')+'\n'+document.getElementById('mainDiv').innerHTML;
-                        sanitized = parsed.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+                        sanitized = parsed..replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace('\'', '&#39;').replace('\\', '&#x2F;');
                         document.getElementById('mainDiv').innerHTML = sanitized.replaceAll('\n', '<br>');
                     } catch (e) {
                         console.log(e);
