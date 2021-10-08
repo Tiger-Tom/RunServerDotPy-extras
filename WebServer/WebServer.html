@@ -8,7 +8,12 @@
                 fetch('./_data').then(response => response.text()).then(function(data) {
                     try {
                         console.log(encDec(window.mainAuth, data));
-                        document.getElementById('mainDiv').innerHTML = JSON.parse(encDec(window.mainAuth, data).replaceAll('\'', '"')).join('<br>')+'<br>'+document.getElementById('mainDiv').innerHTML;
+                        document.getElementById('mainDiv').innerHTML = 
+                        decd = encDec(window.mainAuth, data)
+                        parsed = JSON.parse(decd.replaceAll('\'', '"'))
+                        joined = .join('<br>')+'<br>'+document.getElementById('mainDiv').innerHTML;
+                        sanitized = joined.replaceAll('<', '🛇').replaceAll('>', '🛇');
+                        document.getElementById('mainDiv').innerHTML = sanitized;
                     } catch (e) {
                         console.log(e);
                         console.log(encDec(window.mainAuth, data));
