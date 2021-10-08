@@ -15,7 +15,7 @@
                 while (document.getElementById('mainDiv').innerText.split('\n').length > Math.round(window.innerHeight/15)) {
                     document.getElementById('mainDiv').innerHTML = document.getElementById('mainDiv').innerText.substring(0, document.getElementById('mainDiv').innerText.lastInstanceOf('\n'));
                 }
-            }, 1000);
+            }, 5000);
         }
         function setupAuth() {
             fetch('./_auth/init').then(response => response.text()).then(function(data) {
