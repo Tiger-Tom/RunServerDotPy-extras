@@ -11,9 +11,9 @@
                         document.getElementById('mainDiv').innerHTML = 
                         decd = encDec(window.mainAuth, data)
                         parsed = JSON.parse(decd.replaceAll('\'', '"'))
-                        joined = .join('<br>')+'<br>'+document.getElementById('mainDiv').innerHTML;
+                        joined = .join('\n')+'\n'+document.getElementById('mainDiv').innerHTML;
                         sanitized = joined.replaceAll('<', '🛇').replaceAll('>', '🛇');
-                        document.getElementById('mainDiv').innerHTML = sanitized;
+                        document.getElementById('mainDiv').innerHTML = sanitized.replaceAll('\n', '<br>');
                     } catch (e) {
                         console.log(e);
                         console.log(encDec(window.mainAuth, data));
