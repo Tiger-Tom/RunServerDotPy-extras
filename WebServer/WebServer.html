@@ -11,6 +11,7 @@
                         document.getElementById('mainDiv').innerHTML = JSON.parse(encDec(window.mainAuth, data)).join('\n')+'\n'+document.getElementById('mainDiv').innerHTML;
                     } catch (e) {
                         console.log(e);
+                        console.log(encDec(window.mainAuth, data));
                     }
                 });
                 while (document.getElementById('mainDiv').innerText.split('\n').length > Math.round(window.innerHeight/15)) {
