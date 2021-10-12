@@ -19,7 +19,8 @@
     "remod": "Reloads all mods (unloads mods and the loads them again, finding new mods)",
     "restart | stop [reason*]": "Restart the server for optional [reason]",
     "save | save-all": "Save the game",
-    "unban | pardon [player]": "Unban/pardon [player]"
+    "unban | pardon [player]": "Unban/pardon [player]",
+    "webinterface": "Starts a web interface on port 8080"
 }, {
     "help [command*]": "Show help (this page) or help about optional [command]",
     "clearlogs": "Delete all logs, and resets the current log files",
