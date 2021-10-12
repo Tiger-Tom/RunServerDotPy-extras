@@ -151,12 +151,14 @@
         window.setInterval(function() {
             if (window.rateLimitingSecs > 0) {
                 document.getElementById('rateLimitingDiv').style.display = 'block';
-                waitStart = new Date().getTime();
-                waitEnd = 0;
-                while (waitEnd < waitStart+(window.rateLimitingSecs*1000)) {
-                    waitEnd = new Date().getTime();
-                }
-                window.rateLimitingSecs = 0;
+                window.setTimeout(function() {
+                    waitStart = new Date().getTime();
+                    waitEnd = 0;
+                    while (waitEnd < waitStart+(window.rateLimitingSecs*1000)) {
+                        waitEnd = new Date().getTime();
+                    }
+                    window.rateLimitingSecs = 0;
+                }, 100);
             } else {
                 document.getElementById('rateLimitingDiv').style.display = 'none';
             }
