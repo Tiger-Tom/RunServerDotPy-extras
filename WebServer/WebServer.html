@@ -152,6 +152,7 @@
             if (window.rateLimitingSecs > 0) {
                 document.getElementById('rateLimitingDiv').style.display = 'block';
                 waitStart = new Date().getTime();
+                waitEnd = 0;
                 while (waitEnd < waitStart+(window.rateLimitingSecs*1000)) {
                     waitEnd = new Date().getTime();
                 }
