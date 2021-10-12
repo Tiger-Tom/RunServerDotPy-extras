@@ -147,11 +147,15 @@
             window.setTimeout(getRemoteData, 200); // In order to give the server time to parse the command if it's quick
             mainLoop();
         }
-        window.rateLimitingTime = 0;
+        window.rateLimitingSecs = 0;
         window.setInterval(function() {
-            if (window.rateLimitingSecs) {
-                window.rateLimitingSecs--;
+            if (window.rateLimitingSecs > 0) {
                 document.getElementById('rateLimitingDiv').style.display = 'block';
+                waitStart = new Date().getTime();
+                while (waitEnd < waitStart+(window.rateLimitingSecs*1000)) {
+                    waitEnd = new Date().getTime();
+                }
+                window.rateLimitingSecs = 0;
             } else {
                 document.getElementById('rateLimitingDiv').style.display = 'none';
             }
