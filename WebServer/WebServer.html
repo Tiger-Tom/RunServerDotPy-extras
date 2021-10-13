@@ -44,7 +44,9 @@
                     console.log(data);
                     console.log(encDec(window.mainAuth, data));
                     dataParsed = (JSON.parse(encDec(window.mainAuth, data).replaceAll('\'', '"')).reverse().join('\n'));
-                    document.getElementById(elemID).innerHTML = dataParsed+'\n'+document.getElementById(elemID).innerHTML;
+                    if (dataParsed) {
+                        document.getElementById(elemID).innerHTML = dataParsed+'\n'+document.getElementById(elemID).innerHTML;
+                    }
                 } catch (e) {
                     console.log(e);
                 }
