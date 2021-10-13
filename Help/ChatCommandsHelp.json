@@ -17,7 +17,7 @@
     "refresh": "Refreshes RunServerDotPy, reloading the script, as well as any configuration and mods. The server has to go offline during this time",
     "reload": "Reloads all datapacks and assets (/reload command)",
     "remod": "Reloads all mods (unloads mods and the loads them again, finding new mods)",
-    "restart | stop [reason*]": "Restart the server for optional [reason]",
+    "restart | stop": "Restart the server",
     "save | save-all": "Save the game",
     "unban | pardon [player]": "Unban/pardon [player]",
     "webinterface": "Starts a web interface on port 8080"
