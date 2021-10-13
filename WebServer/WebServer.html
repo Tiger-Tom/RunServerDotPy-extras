@@ -43,7 +43,7 @@
                 try {
                     console.log(data);
                     console.log(encDec(window.mainAuth, data));
-                    dataParsed = (JSON.parse(encDec(window.mainAuth, data).replaceAll('\'', '"')).reverse().join('\n'));
+                    dataParsed = JSON.parse(encDec(window.mainAuth, data)).reverse().join('\n');
                     if (dataParsed) {
                         document.getElementById(elemID).innerHTML = dataParsed+'\n'+document.getElementById(elemID).innerHTML;
                     }
